@@ -1,7 +1,9 @@
+import { Divider } from './stories/Divider';
+
 function App() {
     return (
         <div className='App'>
-            <button className='btn btn-secondary text-white'>Test</button>
+            <Divider lineStyle={'dashed'}>Test</Divider>
         </div>
     );
 }

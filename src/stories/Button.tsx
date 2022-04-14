@@ -1,5 +1,5 @@
 import React from 'react';
-import './bootstrap.scss';
+import './Button.scss';
 
 interface ButtonProps {
     /**
@@ -7,13 +7,9 @@ interface ButtonProps {
      */
     primary?: boolean;
     /**
-     * What background color to use
-     */
-    backgroundColor?: string;
-    /**
      * How large should the button be?
      */
-    size?: 'sm' | 'lg';
+    size?: 'sm' | 'md' | 'lg';
     /**
      * Button contents
      */
@@ -29,8 +25,7 @@ interface ButtonProps {
  */
 export const Button = ({
     primary = false,
-    size,
-    backgroundColor,
+    size = 'md',
     label,
     ...props
 }: ButtonProps) => {
@@ -38,8 +33,9 @@ export const Button = ({
     return (
         <button
             type='button'
-            className={['btn', size ? `btn-${size}` : '', mode].join(' ')}
-            style={{ backgroundColor }}
+            className={['btn', size !== 'md' ? `btn-${size}` : '', mode].join(
+                ' '
+            )}
             {...props}
         >
             {label}

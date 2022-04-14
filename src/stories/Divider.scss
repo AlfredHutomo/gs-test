@@ -1,0 +1,55 @@
+@import '../../scss/overides.scss';
+
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    padding: 0.5rem;
+
+    &__content {
+        padding: 0.5rem;
+    }
+
+    &__separator-left {
+        width: 100%;
+        border-bottom: 2px solid $black;
+
+        &.light {
+            border-width: 1px;
+        }
+
+        &.heavy {
+            border-width: 3px;
+        }
+
+        &.dotted {
+            border-bottom-style: dotted;
+        }
+
+        &.dashed {
+            border-bottom-style: dashed;
+        }
+    }
+
+    &__separator-right {
+        width: 100%;
+        border-bottom: 2px solid $black;
+
+        &.light {
+            border-width: 1px;
+        }
+
+        &.heavy {
+            border-width: 3px;
+        }
+
+        &.dotted {
+            border-bottom-style: dotted;
+        }
+
+        &.dashed {
+            border-bottom-style: dashed;
+        }
+    }
+}
